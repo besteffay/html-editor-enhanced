@@ -152,6 +152,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                       useHybridComposition: widget.htmlEditorOptions
                           .androidUseHybridComposition,
                       loadWithOverviewMode: true,
+                      overScrollMode: OverScrollMode.IF_CONTENT_SCROLLS
                     ),
                     initialUserScripts:
                         widget.htmlEditorOptions.mobileInitialScripts
@@ -527,10 +528,10 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                                 ? scriptAutoHeight : script);
                         await controller.evaluateJavascript(
                             source:
-                                "document.onselectionchange = onSelectionChange; console.log('done');");
+                                "document.onselectionchange = onSelectionChange;");
                         await controller.evaluateJavascript(
                             source:
-                                "document.getElementsByClassName('note-editable')[0].setAttribute('inputmode', '${describeEnum(widget.htmlEditorOptions.inputType)}');");
+                                "document.getElementsByClassName('note-editable')[0].setAttribute('inputmode', '${(widget.htmlEditorOptions.inputType.name)}');");
                         if ((Theme.of(context).brightness == Brightness.dark ||
                                 widget.htmlEditorOptions.darkMode == true) &&
                             widget.htmlEditorOptions.darkMode != false) {
@@ -619,34 +620,6 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                       }
                     },
                   ),
-                  if ( widget.controller.editorController != null &&  widget.controller.editorController!.scrollX > 0)
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            height: 100, // Adjust the fade-out height as needed
-            child: Container(
-              color: Colors.black.withOpacity(0.2), // Adjust the fade-out color and opacity
-              child: Opacity(
-                opacity:  widget.controller.editorController!.scrollX > 0 ? 1 : 0,
-                child: Container(),
-              ),
-            ),
-          ),
-        if ( widget.controller.editorController != null &&  widget.controller.editorController!.scrollY > 0)
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: 100, // Adjust the fade-out height as needed
-            child: Container(
-              color: Colors.black.withOpacity(0.2), // Adjust the fade-out color and opacity
-              child: Opacity(
-                opacity:  widget.controller.editorController!.scrollY > 0 ? 1 : 0,
-                child: Container(),
-              ),
-            ),
-          ),
                 ],
                 )
               ),
