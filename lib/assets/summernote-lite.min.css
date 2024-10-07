@@ -1170,34 +1170,6 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
   padding: 0;
 }
 
-.note-toolbar .note-style .dropdown-style h1 {
-  font-size: 32px;
-}
-
-.note-toolbar .note-style .dropdown-style h2 {
-  font-size: 26px;
-}
-
-.note-toolbar .note-style .dropdown-style h3 {
-  font-size: 20px;
-}
-
-.note-toolbar .note-style .dropdown-style h4 {
-  font-size: 12px;
-}
-
-.note-toolbar .note-style .dropdown-style h5 {
-  font-size: 10px;
-}
-
-.note-toolbar .note-style .dropdown-style h6 {
-  font-size: 8px;
-}
-
-.note-toolbar .note-style .dropdown-style p {
-  font-size: 12px;
-}
-
 .note-popover .popover-content .note-color-all .note-dropdown-menu,.note-toolbar .note-color-all .note-dropdown-menu {
   min-width: 337px;
 }

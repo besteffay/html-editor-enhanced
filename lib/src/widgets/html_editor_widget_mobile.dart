@@ -146,6 +146,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                           });
                     },
                     initialSettings: InAppWebViewSettings(
+                      textZoom: 90,
                       javaScriptEnabled: true,
                       transparentBackground: true,
                       useShouldOverrideUrlLoading: true,
