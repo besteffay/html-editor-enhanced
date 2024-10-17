@@ -15,7 +15,7 @@ textarea:focus, input:focus, span, label, .note-status-output {
 	color: #000 !important;
 }
 .note-btn:not(.note-color-btn) {
-	background-color: #121212 !important;
+	background-color: transparent !important;
 }
 .note-btn:focus,
 .note-btn:active,
