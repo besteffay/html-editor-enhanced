@@ -116,7 +116,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
           }
         },
         child: Container(
-          height: docHeight + 10,
+          height: docHeight/* + 10*/,
           decoration: widget.otherOptions.decoration,
           child: Column(
             children: [
