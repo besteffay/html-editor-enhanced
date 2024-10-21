@@ -289,7 +289,7 @@
   color: #333;
   background-color: #f5f5f5;
   border-bottom: 1px solid;
-  border-color: #ff0000;
+  border-color: #ddd;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -622,7 +622,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
 .note-input {
   width: 100%;
   display: block;
-  border: 1px solid #ededef;
+  border: 1px solid #0000ff;
   background: #fff;
   outline: 0;
   padding: 6px 4px;
