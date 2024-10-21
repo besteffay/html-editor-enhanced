@@ -186,7 +186,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                               context.findRenderObject()!,
                             );
                       }
-                      if (widget.htmlEditorOptions.adjustHeightForKeyboard &&
+                      /*if (widget.htmlEditorOptions.adjustHeightForKeyboard &&
                           mounted &&
                           !visibleStream.isClosed) {
                         Future<void> setHeightJS() async {
@@ -226,7 +226,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                           //todo add support for traditional summernote controls again?
                           await setHeightJS();
                         }
-                      }
+                      }*/
                     },
                     onLoadStop:
                         (InAppWebViewController controller, Uri? uri) async {
