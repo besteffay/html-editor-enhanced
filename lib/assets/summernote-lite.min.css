@@ -622,7 +622,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
 .note-input {
   width: 100%;
   display: block;
-  border: 1px solid #0000ff;
+  border: 1px solid #ededef;
   background: #fff;
   outline: 0;
   padding: 6px 4px;
@@ -744,7 +744,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
   font-family: sans-serif;
   display: none;
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #ff0000;
 }
 
 .note-popover.in {
