@@ -890,7 +890,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
 }
 
 .note-editor.dragover .note-dropzone {
-  display: table;
+  display: none;
 }
 
 .note-editor .note-editing-area {
@@ -943,8 +943,6 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
   background-color: transparent;
   cursor: default;
   user-select: all;
-  -webkit-user-drag: none;
-  pointer-events: none;
 }
 
 .note-editor.note-airframe .note-editing-area .note-codable,.note-editor.note-frame .note-editing-area .note-codable {
