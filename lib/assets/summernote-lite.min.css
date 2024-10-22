@@ -744,7 +744,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
   font-family: sans-serif;
   display: none;
   background: #fff;
-  border: 1px solid #ff0000;
+  border: 1px solid #ccc;
 }
 
 .note-popover.in {
@@ -776,7 +776,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
   left: 20px;
   margin-left: -10px;
   border-top-width: 0;
-  border-bottom-color: #999;
+  border-bottom-color: #bf0000;
   border-bottom-color: rgba(0,0,0,.25);
 }
 
