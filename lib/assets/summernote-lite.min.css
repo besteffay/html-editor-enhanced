@@ -953,7 +953,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
   box-shadow: none;
   font-family: Menlo,Monaco,monospace,sans-serif;
   font-size: 14px;
-  color: #aa0000;
+  color: #ccc;
   background-color: #222;
   resize: none;
   outline: none;
@@ -1001,7 +1001,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
 }
 
 .note-editor.note-airframe .note-status-output .text-muted,.note-editor.note-frame .note-status-output .text-muted {
-  color: #777;
+  color: #890000;
 }
 
 .note-editor.note-airframe .note-status-output .text-primary,.note-editor.note-frame .note-status-output .text-primary {
