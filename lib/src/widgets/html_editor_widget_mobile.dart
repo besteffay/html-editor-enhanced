@@ -227,6 +227,28 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                           await setHeightJS();
                         }
                       }*/
+                      if (widget.htmlEditorOptions.adjustHeightForKeyboard && 
+                          mounted &&
+                          !visibleStream.isClosed) {
+                        Future<void> scrollToSelectionJS() async {
+                          await controller.evaluateJavascript(source: """
+                            var selection = window.getSelection();
+                            if (selection.rangeCount) {
+                              var firstRange = selection.getRangeAt(0);
+                              if (firstRange.commonAncestorContainer !== document) {
+                                var tempAnchorEl = document.createElement('br');
+                                firstRange.insertNode(tempAnchorEl);
+                                tempAnchorEl.scrollIntoView({
+                                  block: 'end',
+                                });
+                                tempAnchorEl.remove();
+                              }
+                            }
+                          """);
+                        }
+
+                        await scrollToSelectionJS();
+                      }
                     },
                     onLoadStop:
                         (InAppWebViewController controller, Uri? uri) async {
