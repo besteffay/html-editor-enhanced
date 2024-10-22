@@ -186,7 +186,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                               context.findRenderObject()!,
                             );
                       }
-                      /*if (widget.htmlEditorOptions.adjustHeightForKeyboard &&
+                      if (widget.htmlEditorOptions.adjustHeightForKeyboard &&
                           mounted &&
                           !visibleStream.isClosed) {
                         Future<void> setHeightJS() async {
@@ -226,28 +226,6 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                           //todo add support for traditional summernote controls again?
                           await setHeightJS();
                         }
-                      }*/
-                      if (widget.htmlEditorOptions.adjustHeightForKeyboard && 
-                          mounted &&
-                          !visibleStream.isClosed) {
-                        Future<void> scrollToSelectionJS() async {
-                          await controller.evaluateJavascript(source: """
-                            var selection = window.getSelection();
-                            if (selection.rangeCount) {
-                              var firstRange = selection.getRangeAt(0);
-                              if (firstRange.commonAncestorContainer !== document) {
-                                var tempAnchorEl = document.createElement('br');
-                                firstRange.insertNode(tempAnchorEl);
-                                tempAnchorEl.scrollIntoView({
-                                  block: 'end',
-                                });
-                                tempAnchorEl.remove();
-                              }
-                            }
-                          """);
-                        }
-
-                        await scrollToSelectionJS();
                       }
                     },
                     onLoadStop:
