@@ -942,7 +942,7 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
 .note-editor.note-airframe .note-editing-area .note-editable[contenteditable=false],.note-editor.note-frame .note-editing-area .note-editable[contenteditable=false] {
   background-color: transparent;
   cursor: default;
-  user-select: none;
+  user-select: all;
 }
 
 .note-editor.note-airframe .note-editing-area .note-codable,.note-editor.note-frame .note-editing-area .note-codable {
