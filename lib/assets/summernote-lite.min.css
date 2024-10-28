@@ -934,13 +934,13 @@ a.note-dropdown-item,a.note-dropdown-item:hover {
 }
 
 .note-editor.note-airframe .note-editing-area .note-editable,.note-editor.note-frame .note-editing-area .note-editable {
-  padding: 100px;
+  padding: 10px;
   overflow: auto;
   word-wrap: break-word;
 }
 
 .note-editor.note-airframe .note-editing-area .note-editable[contenteditable=false],.note-editor.note-frame .note-editing-area .note-editable[contenteditable=false] {
-  background-color: transparent;
+  background-color: #222;
   cursor: default;
   user-select: auto;
 }
